@@ -17,6 +17,14 @@ $header-font-family: 'Crafty Girls', cursive;
         width: 100%;
         display: inline-block;
         text-align: center;
+        font-family: "Crafty Girls", cursive;
+        font-weight: bold;
+        font-style: normal;
+        color: #222;
+        text-rendering: optimizeLegibility;
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+        line-height: 1.2125em;
     }
     .active {
         border-bottom: 5px solid orange;
