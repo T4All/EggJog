@@ -32,7 +32,7 @@
           console.log=function (m) {
             var p = document.createElement("p");
             p.innerText = m;
-            document.body.appendChild(p);
+            document.findElementById('log').appendChild(p);
           };
         </script>
     </head>
@@ -47,6 +47,7 @@
 
       <div class="container" ng-view="">
       </div>
+      <div id=log></div>
       <script src="http://kreaskript.cisco.com:8080/target/target-script-min.js#EggJogDid"></script>
       <script src="phonegap.js"></script>
 
