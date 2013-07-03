@@ -1,0 +1,16 @@
+{
+  "name": "angular-phonegap",
+  "version": "0.1.0",
+  "main": "./angular-phonegap.min.js",
+  "dependencies": {
+    "angular": "1.0.7"
+  },
+  "gitHead": "441698aad34089ddd04049903d07f3c80562fbed",
+  "_id": "angular-phonegap@0.1.0",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mstaessen/bower-angular-phonegap.git"
+  }
+}
