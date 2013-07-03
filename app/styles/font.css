@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'CraftyGirls';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Crafty Girls'), local('CraftyGirls'), url(./fonts/CraftyGirls.woff) format('woff');
+}
