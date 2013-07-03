@@ -1,1 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Crafty+Girls);
 @import "foundation/scss/foundation.scss";
+body, h4 {
+    font-family: 'Crafty Girls', cursive;
+}
+.myTabs {
+    padding-bottom: 0px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 6px -6px #8A8A8A;
+    a {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    .active {
+        border-bottom: 5px solid orange;
+    }
+}
+div.switch {
+    max-width: 5.5em;
+}
