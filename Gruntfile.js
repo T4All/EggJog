@@ -16,10 +16,13 @@ module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
+  var modRewrite = require('connect-modrewrite');
+
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    cordova: 'www'
   };
 
   try {
@@ -63,6 +66,9 @@ module.exports = function (grunt) {
         options: {
           middleware: function (connect) {
             return [
+              modRewrite([
+                '!\\.html|\\.js|\\.css|\\.swf|\\.jp(e?)g|\\.png|\\.gif$ /index.html'
+              ]),
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, yeomanConfig.app)
@@ -255,6 +261,15 @@ module.exports = function (grunt) {
             'generated/*'
           ]
         }]
+      },
+      cordova: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.dist %>',
+          dest: '<%= yeoman.cordova %>',
+          src: '**/*'
+        }]
       }
     },
     concurrent: {
@@ -331,13 +346,14 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'concat',
-    'copy',
+    'copy:dist',
     'cdnify',
     'ngmin',
     'cssmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'copy:cordova'
   ]);
 
   grunt.registerTask('default', [
