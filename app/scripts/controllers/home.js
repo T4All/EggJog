@@ -2,6 +2,6 @@
 
 angular.module('EggJogApp')
   .controller('HomeCtrl', ['$scope', function ($scope) {
-    $scope.progress = '10%'
+    $scope.progress = '50%'
     $scope.enabled = 1;
   }]);
