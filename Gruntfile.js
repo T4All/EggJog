@@ -21,8 +21,7 @@ module.exports = function (grunt) {
   // configurable paths
   var yeomanConfig = {
     app: 'app',
-    dist: 'dist',
-    cordova: 'www'
+    dist: 'www'
   };
 
   try {
@@ -247,7 +246,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{png,txt,xml}',
             '.htaccess',
             'bower_components/**/*',
             'images/{,*/}*.{gif,webp,svg}',
@@ -260,15 +259,6 @@ module.exports = function (grunt) {
           src: [
             'generated/*'
           ]
-        }]
-      },
-      cordova: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.dist %>',
-          dest: '<%= yeoman.cordova %>',
-          src: '**/*'
         }]
       }
     },
@@ -347,13 +337,12 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'concat',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'ngmin',
     'cssmin',
     'uglify',
-    'rev',
-    'usemin',
-    'copy:cordova'
+    //'rev',
+    'usemin'
   ]);
 
   grunt.registerTask('default', [
