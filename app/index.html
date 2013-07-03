@@ -32,7 +32,7 @@
       <div class="row myTabs" ng-controller="NavCtrl">
         <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
           <a ng-href="{{'#/'+tab}}">
-            <h4 ng-bind="tab"></h4>
+            <h3 ng-bind="tab"></h3>
           </a>
         </div>
       </div>
@@ -44,7 +44,6 @@
       <!-- build:js({.tmp,app}) scripts/scripts.js -->
       <script src="bower_components/angular-unstable/angular.js"></script>
       <script src="scripts/app.js"></script>
-      <script src="scripts/controllers/main.js"></script>
       <script src="scripts/controllers/nav.js"></script>
       <script src="scripts/controllers/home.js"></script>
       <script src="scripts/controllers/trophies.js"></script>
