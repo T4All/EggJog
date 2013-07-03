@@ -26,6 +26,14 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <title>EggJogg</title>
+        <script>
+          console=console?console:{};
+          console.log=function (m) {
+            var p = document.createElement("p");
+            p.innerText = m;
+            document.body.appendChild(p);
+          };
+        </script>
     </head>
     <body ng-app="EggJogApp">
 
