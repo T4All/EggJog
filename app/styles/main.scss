@@ -1,8 +1,8 @@
+$body-font-family: "Crafty Girls", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Crafty Girls", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
 @import url(http://fonts.googleapis.com/css?family=Crafty+Girls);
 @import "foundation/scss/foundation.scss";
-body, h4 {
-    font-family: 'Crafty Girls', cursive;
-}
 .myTabs {
     padding-bottom: 0px;
     border-bottom: 1px solid grey;
