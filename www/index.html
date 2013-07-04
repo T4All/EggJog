@@ -37,11 +37,14 @@
 
       <div class="row myTabs" ng-controller="NavCtrl">
         <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
-          <a ng-href="{{'#/'+tab}}" ng-bind="tab">
-          </a>
+          <a ng-href="{{'#/'+tab}}">{{tab}}</a>
         </div>
       </div>
-
+      <div class="row myTabs" ng-controller="NavCtrl">
+        <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
+          <a ng-href="{{'#/'+tab}}" ng-bind="tab">test</a>
+        </div>
+      </div>
       <div class="container" ng-view="">
       </div>
       <div id="log"></div>
