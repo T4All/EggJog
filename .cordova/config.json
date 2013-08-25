@@ -1,0 +1,11 @@
+{
+	"lib":{
+		"www":{
+			"id":"phonegap",
+			"version":"2.9.0",
+			"uri":"https://github.com/phonegap/phonegap-app-hello-world/archive/2.9.0.tar.gz"
+		}
+	},
+	"id":"com.github.t4all.eggjog",
+	"name":"EggJog"
+}
