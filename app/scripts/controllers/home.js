@@ -20,13 +20,6 @@ angular.module('EggJogApp')
         $scope.message = m;
       });  	
     }
-   	// // Wait for device API libraries to load
-    // document.addEventListener("deviceready", onDeviceReady, false);
-
-    // // device APIs are available
-    // function onDeviceReady() {
-    //     alert("deviceready");
-    // }
 
     cordovaReady.then(function() {
   		msg("received 'deviceready'");  	
@@ -36,5 +29,5 @@ angular.module('EggJogApp')
   			msg("created tables");  	
   		})
     });
-    
+
   }]);
