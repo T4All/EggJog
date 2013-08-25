@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('EggJogApp')
-	.service('db', function db(cordovaReady, msg) {
+	.service('db', function db($q, cordovaReady, msg) {
 
 		var db;
 
@@ -17,7 +17,7 @@ angular.module('EggJogApp')
 
 		function transationP(fn) {
 			var deferred = $q.defer();
-			db.transaction(fn, function(err) {
+			db.transaction(function(tx) { return dn(tx); }, function(err) {
 					return deferred.reject(err);
 				}, function() {
 					return deferred.resolve(); 	
