@@ -26,14 +26,6 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <title>EggJogg</title>
-        <script>
-          console=console?console:{};
-          console.log=function (m) {
-            var p = document.createElement("p");
-            p.innerText = m;
-            document.findElementById('log').appendChild(p);
-          };
-        </script>
     </head>
     <body ng-app="EggJogApp">
       <div ng-controller="NavCtrl">
@@ -45,8 +37,6 @@
       </div>
       <div class="container" ng-view="">
       </div>
-      <div id=log></div>
-      <script src="http://kreaskript.cisco.com:8080/target/target-script-min.js#EggJogDid"></script>
       <script src="phonegap.js"></script>
 
       <!-- build:js({.tmp,app}) scripts/scripts.js -->
