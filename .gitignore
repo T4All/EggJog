@@ -6,3 +6,5 @@
 /app/bower_components
 /plugins
 /platforms/android/bin
+/platforms/android/assets
+/platforms/android/gen
