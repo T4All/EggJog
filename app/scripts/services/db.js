@@ -3,6 +3,8 @@
 angular.module('EggJogApp')
 	.service('db', function db(cordovaReady, msg) {
 
+		var db;
+
 		function initializeDb(tx) {
 			tx.executeSql('CREATE TABLE IF NOT EXISTS Steps (day DATE, count INTEGER)');
 			tx.executeSql('CREATE TABLE IF NOT EXISTS Trophies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)');
@@ -10,12 +12,12 @@ angular.module('EggJogApp')
 		}
 		// Transaction error callback
 		function errorCB(err) {
-			msg.error("Error processing SQL: "+err.code);  	
+			msg.error("Error processing SQL: "+err.code+" "+err);  	
 		}
 
-		function transationP() {
+		function transationP(fn) {
 			var deferred = $q.defer();
-			db.transaction(arguments, function(err) {
+			db.transaction(fn, function(err) {
 					return deferred.reject(err);
 				}, function() {
 					return deferred.resolve(); 	
@@ -26,7 +28,7 @@ angular.module('EggJogApp')
 		var init = cordovaReady
 				.then(function() {
 					msg.info("received 'deviceready'");  	
-					var db = window.openDatabase("eggjog", "0.1", "EggJog DB", 1000000);
+					db = window.openDatabase("eggjog", "0.1", "EggJog DB", 1000000);
 					msg.info("opened database");  	
 					return transationP.then(initializeDb);
 				})
