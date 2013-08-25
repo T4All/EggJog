@@ -37,32 +37,13 @@
     </head>
     <body ng-app="EggJogApp">
       <div ng-controller="NavCtrl">
-      <div class="row myTabs">
-        <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
-          <a ng-href="{{'#/'+tab}}">{{tab}}</a>
+        <div class="row myTabs">
+          <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
+            <a ng-href="{{'#/'+tab}}">{{tab}}</a>
+          </div>
         </div>
       </div>
-      <div class="row myTabs">
-        <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
-          <a ng-href="{{'#/'+tab}}" ng-bind="tab">test</a>
-        </div>
-      </div>
-      <div class="row myTabs">
-        <div class="small-3 large-3 columns">
-          <a ng-href="#/home" href="#/home">home</a>
-        </div>
-        <div class="small-3 large-3 columns">
-          <a ng-href="#/stats" href="#/stats">stats</a>
-        </div>
-        <div class="small-3 large-3 columns">
-          <a ng-href="#/trophies" href="#/trophies">trophies</a>
-        </div>
-        <div class="small-3 large-3 columns">
-          <a ng-href="#/about" href="#/about">about</a>
-        </div>
-      </div>
-    </div>
-     <div class="container" ng-view="">
+      <div class="container" ng-view="">
       </div>
       <div id=log></div>
       <script src="http://kreaskript.cisco.com:8080/target/target-script-min.js#EggJogDid"></script>
