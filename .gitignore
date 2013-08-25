@@ -1,7 +1,8 @@
-cordova
-node_modules
-dist
-.tmp
-.sass-cache
-app/bower_components
-plugins
+/cordova
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/app/bower_components
+/plugins
+/platforms/android/bin
