@@ -3,7 +3,7 @@
 function whocares(){}
 
 angular.module('EggJogApp')
-.service('bgCounter', function(cordovaReady, $q) {
+.factory('bgCounter', function(cordovaReady, $q) {
   var bgCounterP, isRunning, lastError = '', ping = whocares, startCount, stopCount;
 
   function ok(data) { isRunning = !!data.ServiceRunning; ping(); }
