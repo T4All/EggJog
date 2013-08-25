@@ -53,6 +53,8 @@
 
     <!-- Plugins can also be added here. -->
     <plugin name="Storage" value="org.apache.cordova.Storage" />
+    <plugin name="BackgroundServicePlugin" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
+
     <!--
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
