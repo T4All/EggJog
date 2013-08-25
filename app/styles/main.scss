@@ -1,4 +1,3 @@
-@import "../bower_components/toastr/toastr.css";
 @import "foundation/scss/normalize.scss";
 @font-face {
   font-family: 'CraftyGirls';
@@ -10,6 +9,7 @@ $body-font-family: CraftyGirls, cursive;
 $header-font-family: CraftyGirls, cursive;
 
 @import "foundation/scss/foundation.scss";
+
 .myTabs {
     padding-bottom: 0px;
     border-bottom: 1px solid grey;
