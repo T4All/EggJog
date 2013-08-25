@@ -17,7 +17,9 @@ angular.module('EggJogApp')
 
 		function transationP(fn) {
 			var deferred = $q.defer();
-			db.transaction(function(tx) { return dn(tx); }, function(err) {
+			msg.info('blah'+fn);
+
+			db.transaction(fn, function(err) {
 					return deferred.reject(err);
 				}, function() {
 					return deferred.resolve(); 	
@@ -30,7 +32,7 @@ angular.module('EggJogApp')
 					msg.info("received 'deviceready'");  	
 					db = window.openDatabase("eggjog", "0.1", "EggJog DB", 1000000);
 					msg.info("opened database");  	
-					return transationP.then(initializeDb);
+					return transationP(initializeDb);
 				})
 				.then(function() {
 					msg.success('initialized db');
