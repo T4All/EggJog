@@ -4,18 +4,14 @@ function whocares(){}
 
 angular.module('EggJogApp')
 .factory('bgCounter', function(cordovaReady, $q) {
-  var bgCounterP, isRunning, lastError = '', ping = whocares, startCount, stopCount;
+  var bgCounterP;
 
-  function ok(data) { isRunning = !!data.ServiceRunning; ping(); }
-  function fail(err) { lastError = err; ping(err); }
-
-  bgCounterP = cordovaReady.then(function() { return cordova.require('cordova/plugin/myService'); });
-  bgCounterP.then(function () {
-    bgCounter.getStatus(ok, fail);
+  bgCounterP = cordovaReady.then(function() {
+    return cordova.require('cordova/plugin/myService');
   });
 
   return {
-    status: function(){
+    isRunning: function(){
       return bgCounterP.then(function(bgCounter) {
         var deferred = $q.defer();
         bgCounter.getStatus(
