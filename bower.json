@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "dependencies": {
     "angular-unstable": "~1.1.5",
-    "foundation": "4.2.3",
-    "foundation-icons": "*"
+    "foundation": "~4.2.3",
+    "foundation-icons": "*",
+    "toastr": "~1.3.1",
+    "jquery": "~2.0.3"
   },
   "devDependencies": {
   }
