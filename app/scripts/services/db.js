@@ -15,28 +15,31 @@ angular.module('EggJogApp')
 			msg.error("Error processing SQL: "+err.code+" "+err);  	
 		}
 
-		function transationP(fn) {
+		function transactionP(fn) {
 			var deferred = $q.defer();
-			msg.info('blah'+fn);
 
 			db.transaction(fn, function(err) {
 					return deferred.reject(err);
 				}, function() {
+					msg.success('created tables');
 					return deferred.resolve(); 	
 				}
 			);
 			return deferred.promise;
 		}
+		
 		var init = cordovaReady
 				.then(function() {
 					msg.info("received 'deviceready'");  	
 					db = window.openDatabase("eggjog", "0.1", "EggJog DB", 1000000);
 					msg.info("opened database");  	
-					return transationP(initializeDb);
-				})
-				.then(function() {
-					msg.success('initialized db');
-				}, errorCB);
+					return transactionP(initializeDb);
+				});
+
+		init.then(function() {
+			msg.success('db is ready');
+			return;
+		}, errorCB);	
 
 		return {
 			getTodaysSteps: function() {
