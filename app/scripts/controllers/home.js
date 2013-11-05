@@ -5,7 +5,8 @@ angular.module('EggJogApp')
     $scope.progress = '0%';
     $scope.enabled = false;
     $scope.running = false;
-
+    $scope.eggs = ['res/img/egg1.svg', 'res/img/egg4.svg', 'res/img/egg7.svg'];
+    
     function showError(err) { msg.error(err); }
 
     bgCounter.isRunning()
