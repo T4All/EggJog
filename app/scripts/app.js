@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('EggJogApp', [])
+angular.module('EggJogApp', ['nvd3ChartDirectives'])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(false)
     $routeProvider

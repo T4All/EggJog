@@ -1,1 +1,15 @@
-<p>This is the stats view.</p>
+<div class="row">
+	<center>
+		<nvd3-discrete-bar-chart
+    	data="weeklyStats"
+        id="weeklyStats"
+        width="480"
+        height="300"
+        xAxisTickFormat="xAxisTickFormatFunction()"
+        staggerLabels="true"
+        showValues="false"
+        color="colorFunction()">
+        	<svg></svg>
+    </nvd3-discrete-bar-chart>
+  </center>
+</div>
