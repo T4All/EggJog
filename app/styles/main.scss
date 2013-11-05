@@ -10,6 +10,8 @@ $header-font-family: CraftyGirls, cursive;
 
 @import "foundation/scss/foundation.scss";
 
+html{ text-rendering: geometricPrecision; }
+
 .myTabs {
     padding-bottom: 0px;
     border-bottom: 1px solid grey;
@@ -19,7 +21,7 @@ $header-font-family: CraftyGirls, cursive;
         width: 100%;
         display: inline-block;
         text-align: center;
-        font-size: 32px;
+        font-size: 1.25em;
         font-weight: 700;
         color: #222;
         margin-top: 0.2em;
