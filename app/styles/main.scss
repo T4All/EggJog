@@ -1,12 +1,12 @@
 @import "foundation/scss/normalize.scss";
-@font-face {
-  font-family: 'CraftyGirls';
-  font-style: normal;
-  font-weight: 400;
-  src: url(fonts/CraftyGirls.ttf) format('truetype');
-}
-$body-font-family: CraftyGirls, cursive;
-$header-font-family: CraftyGirls, cursive;
+// @font-face {
+//   font-family: 'CraftyGirls';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(fonts/CraftyGirls.ttf) format('truetype');
+// }
+// $body-font-family: CraftyGirls, cursive;
+// $header-font-family: CraftyGirls, cursive;
 
 @import "foundation/scss/foundation.scss";
 

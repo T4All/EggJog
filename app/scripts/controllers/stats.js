@@ -29,4 +29,9 @@ angular.module('EggJogApp')
         return d3.time.format('%b%e')(new Date(d));
       }
     };
+    $scope.yAxisTickFormatFunction = function(){
+      return function(d){
+        return Math.round(d);
+      }
+    };
 }]);

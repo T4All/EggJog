@@ -1,11 +1,15 @@
 <div class="row">
 	<center>
+		<h5>Last 7 days Steps</h5>
 		<nvd3-discrete-bar-chart
     	data="weeklyStats"
         id="weeklyStats"
         width="480"
-        height="300"
+        height="320"
+        showXAxis="true"
+        showYAxis="true"
         xAxisTickFormat="xAxisTickFormatFunction()"
+        yAxisTickFormat="yAxisTickFormatFunction()"
         staggerLabels="true"
         showValues="false"
         color="colorFunction()">
