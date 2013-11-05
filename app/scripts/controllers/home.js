@@ -6,6 +6,7 @@ angular.module('EggJogApp')
     $scope.enabled = false;
     $scope.running = false;
     $scope.eggs = ['res/img/egg1.svg', 'res/img/egg4.svg', 'res/img/egg7.svg'];
+    $scope.age = 0;
     
     function showError(err) { msg.error(err); }
 
