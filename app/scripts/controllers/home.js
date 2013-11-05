@@ -5,7 +5,6 @@ angular.module('EggJogApp')
     $scope.progress = '0%';
     $scope.enabled = false;
     $scope.running = false;
-    msg.info('home view');
 
     function showError(err) { msg.error(err); }
 
