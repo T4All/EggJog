@@ -31,4 +31,11 @@ $header-font-family: CraftyGirls, cursive;
 }
 div.switch {
     max-width: 5.5em;
+    margin-bottom: 0px;
+}
+div.switchLine {
+    line-height: 22px;
+}
+div.row.space {
+    margin-top: 5px;
 }

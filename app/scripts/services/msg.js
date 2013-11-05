@@ -22,7 +22,7 @@ angular.module('EggJogApp')
     //     success: 'icon-ok-sign',
     //     warning: 'icon-warning-sign'
     //   };
-    toastr.options.timeOut = 0;
+    toastr.options.timeOut = 1000;
     
     return toastr;
   }]);

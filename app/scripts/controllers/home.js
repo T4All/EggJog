@@ -2,7 +2,7 @@
 
 angular.module('EggJogApp')
   .controller('HomeCtrl', function ($scope, db, msg, bgCounter) {
-    $scope.progress = '50%';
+    $scope.progress = '0%';
     $scope.enabled = false;
     $scope.running = false;
     msg.info('home view');
@@ -10,8 +10,7 @@ angular.module('EggJogApp')
     function showError(err) { msg.error(err); }
 
     bgCounter.isRunning()
-    .then(
-      function (status) {
+    .then(function (status) {
         $scope.enabled = $scope.running = status;
       }
       , msg
@@ -20,14 +19,16 @@ angular.module('EggJogApp')
     $scope.$watch('enabled', function (state) {
       if (state) {
         bgCounter.startCounting()
-        .then(
-          function() { $scope.running = true; }
+        .then(function() { 
+          $scope.running = true; 
+          }
           , showError
         );
       } else {
         bgCounter.stopCounting()
-        .then(
-          function() { $scope.running = false; }
+        .then(function() { 
+            $scope.running = false; 
+          }
           , showError
         );
       }

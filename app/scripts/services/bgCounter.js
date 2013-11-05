@@ -26,7 +26,7 @@ angular.module('EggJogApp')
         var deferred = $q.defer();
         bgCounter.startService(
           function(data) {
-            bgCounter.registerForBootStart(whocares,whocares);
+            bgCounter.registerForBootStart(whocares, whocares);
             deferred.resolve(data);
           }
           , function(err) { deferred.reject(err); }

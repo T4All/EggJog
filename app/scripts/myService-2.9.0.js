@@ -15,5 +15,5 @@
  */
 
 cordova.define(	'cordova/plugin/myService',	function(require, exports, module) {    
-												CreateBackgroundService('com.yournamespace.yourappname.MyService', require, exports, module);
-											});
+	CreateBackgroundService('com.yournamespace.yourappname.MyService', require, exports, module);
+});
