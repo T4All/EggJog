@@ -4,13 +4,7 @@
 <div class="row">
 	<ul class="small-block-grid-4 large-block-grid-8">
 	  <li data-ng-repeat="tomb in tombs">
-	  	<img src="res/img/eggrip.svg">
-	  	<center>
-	  		<h6>
-	  			<span data-ng-bind="tomb.name"></span> 
-	  			<small>(<span data-ng-bind="tomb.age"></span> days)</small>
-	  		</h6>
-	  	</center>
+	  	<span data-ng-include="'res/img/eggrip.svg'"></span>
 	  </li>
 	</ul>
 </div>
