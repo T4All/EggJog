@@ -1,1 +1,15 @@
-<p>This is the trophies view.</p>
+<div class="row">
+	<h5>Graveyard</h5>	
+</div>
+<div class="graveyard">		
+  <div class="tombs">
+  	<span data-ng-repeat="tomb in tombs" class="tomb" data-ng-include="'res/img/eggrip.svg'"></span>
+  </div>
+</div>
+<div class="row">
+	<h5>Trophies</h5>
+</div>
+<div class="row" data-ng-repeat="trophy in trophies">
+	<div class="columns small-4 large-3" data-ng-bind="trophy.name"></div>
+	<div class="columns small-8 large-9" data-ng-bind="trophy.description"></div>
+</div>

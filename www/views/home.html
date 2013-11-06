@@ -1,28 +1,29 @@
-<div class="row">
-  <div health="" class="right">health (%)</div>
-  <div class="column small-10 small-centered large-centered">
-    <a class="th radius" href="http://farm9.staticflickr.com/8520/8487424258_e27c46f72f_z.jpg">
-      <img src="http://farm9.staticflickr.com/8520/8487424258_e27c46f72f_z.jpg">
-    </a>
+<div class="row space">
+  <div class="column small-10 small-centered">
+    <center>
+      <span data-ng-include="eggs[age]" data-ng-click="age=(age+1)%3"></span>
+      <!-- <img data-ng-src="{{eggs[age]}}" width="100%" data-ng-click="age=(age+1)%3"> -->
+    </center>
   </div>
 </div>
-<div class="row">
-</div>
-<div class="row">
-  <div class="right">
-    <div class="switch">
-      <input id="x" name="switch-x" type="radio" ng-model="enabled" ng-value="0">
-      <label for="x">Off</label>
 
+<div class="row space">
+  <div class="columns small-6 small-centered">
+    <p><center>{{5000-steps}} steps to go!</center></p>
+  </div>
+</div>
+
+<div class="row space" style="position: fixed; bottom:0; padding: 1em">
+  <div class="small-12 columns">
+    <div class="switch large round" style="margin-right:0; margin-left:auto">
+      <input id="x" name="switch-x" type="radio" ng-model="enabled" ng-value="0" checked="checked">
+      <label for="x">Off</label>
       <input id="x1" name="switch-x" type="radio" ng-model="enabled" ng-value="1">
       <label for="x1">On</label>
-
       <span></span>
     </div>
+    <div style="text-align: right; font-size: 0.7em; font-style: italic; margin-top: 0.5em">
+        Step counter is <span ng-hide="running">not </span>running
+    </div>
   </div>
-  <div class="columns progress small-6 small-centered secondary">
-    <span class="meter" ng-style="{width: progress}"></span>
-  </div>
-  <div class="alert" ng-bind="message"></div>
-  Step counter is <span ng-hide="running">not running
-</span></div>
+</div>
