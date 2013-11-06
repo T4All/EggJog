@@ -31,8 +31,8 @@
     <body ng-app="EggJogApp">
       <div ng-controller="NavCtrl">
         <div class="row myTabs">
-          <div class="small-3 large-3 columns" ng-repeat="tab in tabs" ng-class="{active: currentTab==tab}">
-            <a ng-href="{{'#/'+tab}}">{{tab}}</a>
+          <div class="small-3 large-3 columns myTab" ng-repeat="title in tabs" ng-class="{active: currentTab==title}">
+            <a ng-href="{{'#/'+title}}" data-ng-include="'res/img/title.svg'"></a>
           </div>
         </div>
       </div>

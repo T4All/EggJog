@@ -7,26 +7,49 @@
 // }
 // $body-font-family: CraftyGirls, cursive;
 // $header-font-family: CraftyGirls, cursive;
+$base-font-size: 24px;
+$em-base: $base-font-size;
+$header-text-rendering: geometricPrecision;
 
 @import "foundation/scss/foundation.scss";
 
-html{ text-rendering: geometricPrecision; }
 
 .myTabs {
     padding-bottom: 0px;
     border-bottom: 1px solid grey;
     margin-bottom: 10px;
     box-shadow: 0 6px 6px -6px #8A8A8A;
-    a {
-        width: 100%;
+
+    .myTab {
         display: inline-block;
-        text-align: center;
-        font-size: 1.25em;
-        font-weight: 700;
-        color: #222;
-        margin-top: 0.2em;
-        margin-bottom: 0.3em;
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 0; bottom: 0; right: 0; left: 0; /*fill parent*/
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
+
+    .myTab:after {
+        padding-top: 50%; /*1:2 ratio*/
+        display: block;
+        content: '';
+    }
+
+    // a {
+    //     width: 100%;
+    //     display: inline-block;
+    //     text-align: center;
+    //     font-size: 1.25em;
+    //     font-weight: 700;
+    //     color: #222;
+    //     margin-top: 0.2em;
+    //     margin-bottom: 0.3em;
+    // }
     .active {
         border-bottom: 5px solid #FAB97E;
     }
@@ -59,7 +82,7 @@ div.row.space {
 }
 
 .wrapper:after {
-    padding-top: 100%; /*16:9 ratio*/
+    padding-top: 100%;
     display: block;
     content: '';
 }

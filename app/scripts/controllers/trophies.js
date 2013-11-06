@@ -19,7 +19,7 @@ angular.module('EggJogApp')
     	, description: 'First 10000 steps'
     }, { name: 'Fried'
     	, description: 'First 20000 steps'
-    }, { name: 'Soth'
+    }, { name: 'Sloth'
     	, description: '5 eggs totaling 5-9 days'
     }, { name: 'Zebra'
     	, description: '5 eggs totaling 10-25 days'

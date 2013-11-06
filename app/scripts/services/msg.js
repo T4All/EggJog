@@ -24,5 +24,11 @@ angular.module('EggJogApp')
     //   };
     toastr.options.timeOut = 1000;
     
-    return toastr;
+    //return toastr;
+    return {
+      error: angular.noop
+      , warning: angular.noop
+      , info: angular.noop
+      , success: angular.noop
+    };
   }]);
