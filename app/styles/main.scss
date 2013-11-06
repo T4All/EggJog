@@ -41,3 +41,15 @@ div.switchLine {
 div.row.space {
     margin-top: 5px;
 }
+.graveyard {
+    height: 163.571px;
+    .tombs {
+        height: 163.571px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;    
+    }
+    .tomb {
+
+    }
+}
