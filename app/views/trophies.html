@@ -1,12 +1,10 @@
 <div class="row">
 	<h5>Graveyard</h5>	
 </div>
-<div class="row">
-	<ul class="small-block-grid-4 large-block-grid-8">
-	  <li data-ng-repeat="tomb in tombs">
-	  	<span data-ng-include="'res/img/eggrip.svg'"></span>
-	  </li>
-	</ul>
+<div class="graveyard">		
+  <div class="tombs">
+  	<span data-ng-repeat="tomb in tombs" class="tomb" data-ng-include="'res/img/eggrip.svg'"></span>
+  </div>
 </div>
 <div class="row">
 	<h5>Trophies</h5>
