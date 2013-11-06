@@ -1,7 +1,8 @@
 <div class="row space">
   <div class="column small-10 small-centered">
     <center>
-      <img data-ng-src="{{eggs[age]}}" width="100%" data-ng-click="age=(age+1)%3">
+      <span data-ng-include="eggs[age]" data-ng-click="age=(age+1)%3"></span>
+      <!-- <img data-ng-src="{{eggs[age]}}" width="100%" data-ng-click="age=(age+1)%3"> -->
     </center>
   </div>
 </div>
