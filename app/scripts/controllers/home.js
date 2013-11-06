@@ -2,7 +2,8 @@
 
 angular.module('EggJogApp')
   .controller('HomeCtrl', function ($scope, db, msg, bgCounter) {
-    $scope.progress = '0%';
+    // TODO this will be a promised value (which is ok in this case but maybe not elsewhere)
+    $scope.steps = db.getTodaysSteps();
     $scope.enabled = false;
     $scope.running = false;
     $scope.eggs = ['res/img/egg1.svg', 'res/img/egg4.svg', 'res/img/egg7.svg'];
