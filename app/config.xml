@@ -25,6 +25,7 @@
         <param name="domain" value="http://kreaskript.cisco.com:8080"/>
         <param name="key" value="eggjog"/>
     </feature> -->
+
     <!--
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
@@ -52,8 +53,7 @@
 
 
     <!-- Plugins can also be added here. -->
-    <plugin name="Storage" value="org.apache.cordova.Storage" />
-    <plugin name="BackgroundServicePlugin" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
+    <!-- <plugin name="Storage" value="org.apache.cordova.Storage" /> -->
 
     <!--
         <gap:plugin name="Example" />
