@@ -64,12 +64,12 @@
 
     <!-- Define app icon for each platform. -->
     <!-- icons generated using inkscape:
-        inkscape --export-area-drawing --export-png=icon-36-ldpi.png --export-width=36 --export-height=36 eggjog.svg
-        inkscape --export-area-drawing --export-png=icon-48-mdpi.png --export-width=48 --export-height=48 eggjog.svg
-        inkscape --export-area-drawing --export-png=icon-72-hdpi.png --export-width=72 --export-height=72 eggjog.svg
-        inkscape --export-area-drawing --export-png=icon-96-xhdpi.png --export-width=96 --export-height=96 eggjog.svg
-        inkscape --export-area-drawing --export-png=icon-108-xxhdpi.png --export-width=4108--export-height=108 eggjog.svg
-        inkscape --export-area-drawing --export-png=icon-144-xxxhdpi.png --export-width=4144--export-height=144 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-36-ldpi.png -\-export-width=36 -\-export-height=36 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-48-mdpi.png -\-export-width=48 -\-export-height=48 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-72-hdpi.png -\-export-width=72 -\-export-height=72 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-96-xhdpi.png -\-export-width=96 -\-export-height=96 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-108-xxhdpi.png -\-export-width=4108 -\-export-height=108 eggjog.svg
+        inkscape -\-export-area-drawing -\-export-png=icon-144-xxxhdpi.png -\-export-width=4144 -\-export-height=144 eggjog.svg
      -->
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
