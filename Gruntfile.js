@@ -332,6 +332,13 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
+  grunt.registerTask('dev', [
+    'clean:dist',
+    'coffee',
+    'compass:dev',
+    'copy:dev'
+  ]);
+
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',

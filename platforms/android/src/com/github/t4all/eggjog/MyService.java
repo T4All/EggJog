@@ -1,4 +1,4 @@
-package com.yournamespace.yourappname;
+package com.github.t4all.eggjog;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
