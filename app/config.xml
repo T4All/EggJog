@@ -51,6 +51,8 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
 
+    <!-- Limit builds to Android -->
+    <gap:platform name="android" />
 
     <!-- Plugins can also be added here. -->
     <!-- <plugin name="Storage" value="org.apache.cordova.Storage" /> -->
