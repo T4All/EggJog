@@ -238,6 +238,26 @@ module.exports = function (grunt) {
     },
     // Put files not handled in other tasks here
     copy: {
+      dev: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,txt,html}',
+            '.htaccess',
+            'font/*',
+            'audio/*',
+            'scripts/**/*',
+            'views/**/*',
+            'components/**/*',
+            'images/{,*/}*.{gif,webp,svg,png}',
+            'styles/fonts/*',
+            'styles/font.css'
+          ]
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -249,7 +269,7 @@ module.exports = function (grunt) {
             '.htaccess',
             'res/**/*',
             'bower_components/**/*.{js,eot,svg,ttf,wof}',
-            'images/{,*/}*.{gif,webp,svg}',
+            'images/{,*/}*.{gif,webp,svg,png}',
             'styles/fonts/*',
             'styles/font.css'
           ]
@@ -335,7 +355,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'clean:dist',
     'coffee',
-    'compass:dev',
+    'compass:dist',
     'copy:dev'
   ]);
 

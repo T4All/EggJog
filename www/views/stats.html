@@ -1,7 +1,19 @@
 <div class="row">
 	<center>
 		<h6>Last 7 days Steps</h6>
-		<nvd3-discrete-bar-chart data="weeklyStats" id="weeklyStats" width="700" height="500" showxaxis="true" showyaxis="true" xaxistickformat="xAxisTickFormatFunction()" yaxistickformat="yAxisTickFormatFunction()" showvalues="false" xaxisrotatelabels="40" color="colorFunction()" margin="{left:60,top:60,bottom:60,right:60}">
+		<nvd3-discrete-bar-chart
+    	data="weeklyStats"
+        id="weeklyStats"
+        width="700"
+        height="500"
+        showXAxis="true"
+        showYAxis="true"
+        xAxisTickFormat="xAxisTickFormatFunction()"
+        yAxisTickFormat="yAxisTickFormatFunction()"
+        showValues="false"
+        xAxisRotateLabels="40"
+        color="colorFunction()"
+        margin="{left:60,top:60,bottom:60,right:60}">
         	<svg></svg>
     </nvd3-discrete-bar-chart>
   </center>
